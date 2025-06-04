@@ -11,61 +11,159 @@
 </head>
 <body class="bg-gradient-to-br from-red-800 to-red-600 text-white font-sans">
 
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-red-900 shadow">
-    <div class="flex items-center space-x-2">
-      <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
-      <div class="text-sm">Binirayan Arnis Team</div>
+ <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-red-900 shadow">
+    <div class="flex justify-between items-center p-4">
+      <div class="flex items-center space-x-2">
+        <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
+        <div class="text-sm">Binirayan Arnis Team</div>
+      </div>
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-yellow-400 focus:outline-none" aria-label="Open Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex space-x-6 font-semibold">
+        <a href="../index.html" class="hover:text-yellow-300 nav-link">Home</a>
+        <a href="about.html" class="hover:text-yellow-300 nav-link">About</a>
+        <a href="training.html" class="hover:text-yellow-300 nav-link active">Training</a>
+        <a href="news.html" class="hover:text-yellow-300 nav-link">News</a>
+        <a href="gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
+        <a href="contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
+        <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+      </div>
     </div>
-    <div class="space-x-6 font-semibold">
-      <a href="#" class="hover:text-yellow-300 nav-link active">Home</a>
-      <a href="Html/about.html" class="hover:text-yellow-300 nav-link">About</a>
-      <a href="Html/training.html" class="hover:text-yellow-300 nav-link">Training</a>
-      <a href="Html/news.html" class="hover:text-yellow-300 nav-link">News</a>
-      <a href="Html/gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
-      <a href="Html/contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
-      <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-red-900 px-4 pb-4 space-y-2 font-semibold">
+      <a href="../index.html" class="block hover:text-yellow-300 nav-link">Home</a>
+      <a href="about.html" class="block hover:text-yellow-300 nav-link">About</a>
+      <a href="training.html" class="block hover:text-yellow-300 nav-link active">Training</a>
+      <a href="news.html" class="block hover:text-yellow-300 nav-link">News</a>
+      <a href="gallery.html" class="block hover:text-yellow-300 nav-link">Gallery</a>
+      <a href="contact.html" class="block hover:text-yellow-300 nav-link">Contact</a>
+      <button onclick="joinTeam()" class="w-full bg-yellow-400 text-red-900 px-3 py-2 rounded font-bold hover:bg-yellow-500">Join the Team</button>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="flex flex-col md:flex-row justify-between items-center p-10 mt-12">
-    <!-- Text Content -->
-    <div class="md:w-1/2 space-y-6">
-      <h1 class="text-5xl font-bold"><span class="text-yellow-400">Binirayan</span> Arnis <span class="text-white">Team</span></h1>
-      <p class="text-lg">Preserving Filipino Heritage Through Martial Arts Excellence</p>
-      <p>Join Antique's premier Arnis team, where tradition meets modern training. We are proud WVRAA participants committed to developing discipline, character, and martial arts mastery.</p>
-      <div class="flex space-x-4">
-        <button onclick="joinTraining()" class="bg-yellow-400 text-red-900 px-5 py-2 rounded font-semibold hover:bg-yellow-500">Join Our Training</button>
-        <input type="text" placeholder="Search..." class="px-3 py-2 rounded text-black">
-      </div>
-      <!-- Stats -->
-      <div class="flex space-x-8 pt-6 text-yellow-300 text-center">
-        <div>
-          <div class="text-3xl">🏆</div>
-          <div>WVRAA<br>Participant</div>
+  <div class="bg-red-50 text-gray-700 font-sans mt-12">
+    <!-- Training Programs Section -->
+    <section class="container mx-auto px-6 py-12">
+        <!-- Title and Description -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-red-800">Training Programs</h1>
+            <p class="mt-4 text-lg">
+                Choose the perfect program for your skill level and goals. From beginners taking their first steps to elite competitors preparing for regional championships.
+            </p>
         </div>
-        <div>
-          <div class="text-3xl">👥</div>
-          <div>50+<br>Active Members</div>
-        </div>
-        <div>
-          <div class="text-3xl">🎖️</div>
-          <div>10+<br>Years Heritage</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Image -->
-    <div class="md:w-1/2 p-6">
-      <div class="border-4 border-yellow-400 rounded-lg overflow-hidden">
-        <img src="../Images/Bat_Picture.jpg" alt="Team" class="w-full h-72 object-cover">
-      </div>
-      <button class="mt-4 bg-yellow-400 text-red-900 px-4 py-2 rounded font-bold hover:bg-yellow-500" onclick="trainingInfo()">Training Daily</button>
-    </div>
-  </section>
+        <!-- Training Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Beginner Fundamentals -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="text-red-800 text-4xl mb-4">👥</div>
+                <h3 class="text-xl font-bold text-red-800 mb-2">Beginner Fundamentals</h3>
+                <p class="text-sm mb-4">
+                    Perfect for newcomers to Arnis. Learn basic stances, grips, and fundamental strikes.
+                </p>
+                <div class="mb-4">
+                    <p class="text-sm"><strong>3 months</strong></p>
+                    <p class="text-sm"><strong>15-20 students</strong></p>
+                    <span class="text-xs bg-red-200 text-red-800 px-2 py-1 rounded-full">Beginner</span>
+                </div>
+                <div class="text-left text-sm mb-4">
+                    <p class="font-bold">What you'll learn:</p>
+                    <ul class="list-disc pl-6">
+                        <li>Basic weapon handling</li>
+                        <li>Footwork fundamentals</li>
+                        <li>Safety protocols</li>
+                        <li>Traditional forms</li>
+                    </ul>
+                </div>
+                <p class="text-sm font-semibold mb-4">Schedule: Mon, Wed, Fri - 6:00 PM</p>
+                <button onclick="enroll('Beginner Fundamentals')" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
+                    Enroll Now
+                </button>
+            </div>
 
-  <!-- Footer -->
+            <!-- Intermediate Training -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="text-red-800 text-4xl mb-4">⭐</div>
+                <h3 class="text-xl font-bold text-red-800 mb-2">Intermediate Training</h3>
+                <p class="text-sm mb-4">
+                    Advance your skills with complex combinations, sparring, and weapon techniques.
+                </p>
+                <div class="mb-4">
+                    <p class="text-sm"><strong>6 months</strong></p>
+                    <p class="text-sm"><strong>10-15 students</strong></p>
+                    <span class="text-xs bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full">Intermediate</span>
+                </div>
+                <div class="text-left text-sm mb-4">
+                    <p class="font-bold">What you'll learn:</p>
+                    <ul class="list-disc pl-6">
+                        <li>Advanced combinations</li>
+                        <li>Sparring techniques</li>
+                        <li>Multiple weapons</li>
+                        <li>Competition prep</li>
+                    </ul>
+                </div>
+                <p class="text-sm font-semibold mb-4">Schedule: Tue, Thu, Sat - 7:00 PM</p>
+                <button onclick="enroll('Intermediate Training')" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
+                    Enroll Now
+                </button>
+            </div>
+
+            <!-- Competition Team -->
+            <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+                <div class="text-red-800 text-4xl mb-4">⚡</div>
+                <h3 class="text-xl font-bold text-red-800 mb-2">Competition Team</h3>
+                <p class="text-sm mb-4">
+                    Elite training for regional and national competitions including WVRAA preparation.
+                </p>
+                <div class="mb-4">
+                    <p class="text-sm"><strong>Ongoing</strong></p>
+                    <p class="text-sm"><strong>8-12 students</strong></p>
+                    <span class="text-xs bg-red-300 text-red-800 px-2 py-1 rounded-full">Advanced</span>
+                </div>
+                <div class="text-left text-sm mb-4">
+                    <p class="font-bold">What you'll learn:</p>
+                    <ul class="list-disc pl-6">
+                        <li>Competition strategies</li>
+                        <li>Elite conditioning</li>
+                        <li>Mental preparation</li>
+                        <li>Team tactics</li>
+                    </ul>
+                </div>
+                <p class="text-sm font-semibold mb-4">Schedule: Daily - 5:30 PM</p>
+                <button onclick="enroll('Competition Team')" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">
+                    Enroll Now
+                </button>
+            </div>
+        </div>
+
+        <!-- Training Facility Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mt-12">
+            <h2 class="text-2xl font-bold text-red-800 mb-4">Our Training Facility</h2>
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-2/3 text-sm mb-6 lg:mb-0">
+                    <p class="mb-4">
+                        Train in our fully equipped facility featuring traditional Filipino martial arts equipment, safety gear, and an authentic environment that honors the heritage of Arnis.
+                    </p>
+                    <ul class="list-disc pl-6">
+                        <li>Full set of traditional Arnis weapons</li>
+                        <li>Professional safety equipment</li>
+                        <li>Spacious training mats</li>
+                        <li>Cultural heritage displays</li>
+                    </ul>
+                </div>
+                <div class="lg:w-1/3 lg:ml-6">
+                    <img src="https://via.placeholder.com/400" alt="Training Facility" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
     <footer class="bg-red-900 text-white mt-16 py-8">
         <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -115,18 +213,18 @@
         </div>
     </footer>
 
-  <!-- SweetAlert2 Scripts -->
-  <script>
-    function joinTraining() {
-      Swal.fire({
-        title: 'Welcome!',
-        text: 'Thank you for your interest in joining our training!',
-        icon: 'success',
-        confirmButtonColor: '#facc15'
-      });
-    }
+    <!-- SweetAlert2 Script -->
+    <script>
+        function enroll(program) {
+            Swal.fire({
+                title: `Enroll in ${program}`,
+                text: 'Thank you for your interest! We will contact you with further details.',
+                icon: 'success',
+                confirmButtonText: 'Close'
+            });
+        }
 
-    function joinTeam() {
+        function joinTeam() {
       Swal.fire({
         title: 'Join the Team!',
         text: 'Fill out the registration form at our contact page.',
@@ -135,15 +233,17 @@
       });
     }
 
-    function trainingInfo() {
-      Swal.fire({
-        title: 'Training Daily!',
-        text: 'Come visit us every afternoon at the Binirayan Complex.',
-        icon: 'info',
-        confirmButtonColor: '#facc15'
+    // Hamburger menu functionality
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
       });
     }
-  </script>
+    </script>
+
+  </div>
 
 </body>
 </html>

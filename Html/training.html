@@ -12,19 +12,38 @@
 <body class="bg-gradient-to-br from-red-800 to-red-600 text-white font-sans">
 
  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-red-900 shadow">
-    <div class="flex items-center space-x-2">
-      <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
-      <div class="text-sm">Binirayan Arnis Team</div>
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-red-900 shadow">
+    <div class="flex justify-between items-center p-4">
+      <div class="flex items-center space-x-2">
+        <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
+        <div class="text-sm">Binirayan Arnis Team</div>
+      </div>
+      <!-- Hamburger Button -->
+      <button id="menu-btn" class="md:hidden text-yellow-400 focus:outline-none" aria-label="Open Menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex space-x-6 font-semibold">
+        <a href="../index.html" class="hover:text-yellow-300 nav-link">Home</a>
+        <a href="about.html" class="hover:text-yellow-300 nav-link">About</a>
+        <a href="training.html" class="hover:text-yellow-300 nav-link active">Training</a>
+        <a href="news.html" class="hover:text-yellow-300 nav-link">News</a>
+        <a href="gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
+        <a href="contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
+        <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+      </div>
     </div>
-    <div class="space-x-6 font-semibold">
-      <a href="../index.html" class="hover:text-yellow-300 nav-link">Home</a>
-      <a href="about.html" class="hover:text-yellow-300 nav-link">About</a>
-      <a href="training.html" class="hover:text-yellow-300 nav-link active">Training</a>
-      <a href="news.html" class="hover:text-yellow-300 nav-link">News</a>
-      <a href="gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
-      <a href="contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
-      <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="md:hidden hidden flex-col bg-red-900 px-4 pb-4 space-y-2 font-semibold">
+      <a href="../index.html" class="block hover:text-yellow-300 nav-link">Home</a>
+      <a href="about.html" class="block hover:text-yellow-300 nav-link">About</a>
+      <a href="training.html" class="block hover:text-yellow-300 nav-link active">Training</a>
+      <a href="news.html" class="block hover:text-yellow-300 nav-link">News</a>
+      <a href="gallery.html" class="block hover:text-yellow-300 nav-link">Gallery</a>
+      <a href="contact.html" class="block hover:text-yellow-300 nav-link">Contact</a>
+      <button onclick="joinTeam()" class="w-full bg-yellow-400 text-red-900 px-3 py-2 rounded font-bold hover:bg-yellow-500">Join the Team</button>
     </div>
   </nav>
 
@@ -211,6 +230,15 @@
         text: 'Fill out the registration form at our contact page.',
         icon: 'info',
         confirmButtonColor: '#facc15'
+      });
+    }
+
+    // Hamburger menu functionality
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
       });
     }
     </script>
