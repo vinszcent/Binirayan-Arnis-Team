@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binirayan Arnis Team</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-gradient-to-br from-red-800 to-red-600 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-red-900 shadow">
+    <div class="flex items-center space-x-2">
+      <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
+      <div class="text-sm">Binirayan Arnis Team</div>
+    </div>
+    <div class="space-x-6 font-semibold">
+      <a href="../Html/index.html" class="hover:text-yellow-300 nav-link active">Home</a>
+      <a href="../Html/about.html" class="hover:text-yellow-300 nav-link">About</a>
+      <a href="../Html/training.html" class="hover:text-yellow-300 nav-link">Training</a>
+      <a href="../Html/news.html" class="hover:text-yellow-300 nav-link">News</a>
+      <a href="../Html/gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
+      <a href="../Html/contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
+      <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col md:flex-row justify-between items-center p-10 mt-12">
+    <!-- Text Content -->
+    <div class="md:w-1/2 space-y-6">
+      <h1 class="text-5xl font-bold"><span class="text-yellow-400">Binirayan</span> Arnis <span class="text-white">Team</span></h1>
+      <p class="text-lg">Preserving Filipino Heritage Through Martial Arts Excellence</p>
+      <p>Join Antique's premier Arnis team, where tradition meets modern training. We are proud WVRAA participants committed to developing discipline, character, and martial arts mastery.</p>
+      <div class="flex space-x-4">
+        <button onclick="joinTraining()" class="bg-yellow-400 text-red-900 px-5 py-2 rounded font-semibold hover:bg-yellow-500">Join Our Training</button>
+        <input type="text" placeholder="Search..." class="px-3 py-2 rounded text-black">
+      </div>
+      <!-- Stats -->
+      <div class="flex space-x-8 pt-6 text-yellow-300 text-center">
+        <div>
+          <div class="text-3xl">🏆</div>
+          <div>WVRAA<br>Participant</div>
+        </div>
+        <div>
+          <div class="text-3xl">👥</div>
+          <div>50+<br>Active Members</div>
+        </div>
+        <div>
+          <div class="text-3xl">🎖️</div>
+          <div>10+<br>Years Heritage</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="md:w-1/2 p-6">
+      <div class="border-4 border-yellow-400 rounded-lg overflow-hidden">
+        <img src="../Images/Bat_Picture.jpg" alt="Team" class="w-full h-72 object-cover">
+      </div>
+      <button class="mt-4 bg-yellow-400 text-red-900 px-4 py-2 rounded font-bold hover:bg-yellow-500" onclick="trainingInfo()">Training Daily</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="bg-red-900 text-white mt-16 py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold text-lg">BAT</h3>
+                <p class="mt-2 text-sm">Binirayan Arnis Team<br>Preserving Filipino heritage through martial arts excellence. Building discipline, character, and community in Antique since 2014.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="hover:text-gray-300">Facebook</a>
+                    <a href="#" class="hover:text-gray-300">Instagram</a>
+                    <a href="#" class="hover:text-gray-300">YouTube</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Training Programs</a></li>
+                    <li><a href="#" class="hover:text-gray-300">News & Events</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Our Programs</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">Beginner Fundamentals</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Intermediate Training</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Competition Team</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Youth Program</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Cultural Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Info</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li>123 Heritage Street<br>San Jose de Buenavista<br>Antique, Philippines 5700</li>
+                    <li>+63 123 456 7890</li>
+                    <li>info@binirayarnis.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-sm">Stay Updated</p>
+            <div class="mt-2 flex justify-center">
+                <input type="email" placeholder="Enter your email" class="w-64 px-4 py-2 text-gray-700 rounded-l-lg border border-gray-300 focus:ring-red-500 focus:border-red-500">
+                <button class="px-4 py-2 bg-red-500 text-white font-bold rounded-r-lg hover:bg-red-600">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+  <!-- SweetAlert2 Scripts -->
+  <script>
+    function joinTraining() {
+      Swal.fire({
+        title: 'Welcome!',
+        text: 'Thank you for your interest in joining our training!',
+        icon: 'success',
+        confirmButtonColor: '#facc15'
+      });
+    }
+
+    function joinTeam() {
+      Swal.fire({
+        title: 'Join the Team!',
+        text: 'Fill out the registration form at our contact page.',
+        icon: 'info',
+        confirmButtonColor: '#facc15'
+      });
+    }
+
+    function trainingInfo() {
+      Swal.fire({
+        title: 'Training Daily!',
+        text: 'Come visit us every afternoon at the Binirayan Complex.',
+        icon: 'info',
+        confirmButtonColor: '#facc15'
+      });
+    }
+  </script>
+
+</body>
+</html>

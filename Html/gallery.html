@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binirayan Arnis Team</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-gradient-to-br from-red-800 to-red-600 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-red-900 shadow">
+    <div class="flex items-center space-x-2">
+      <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
+      <div class="text-sm">Binirayan Arnis Team</div>
+    </div>
+    <div class="space-x-6 font-semibold">
+      <a href="../Html/index.html" class="hover:text-yellow-300 nav-link">Home</a>
+      <a href="../Html/about.html" class="hover:text-yellow-300 nav-link">About</a>
+      <a href="../Html/training.html" class="hover:text-yellow-300 nav-link">Training</a>
+      <a href="../Html/news.html" class="hover:text-yellow-300 nav-link">News</a>
+      <a href="../Html/gallery.html" class="hover:text-yellow-300 nav-link active">Gallery</a>
+      <a href="../Html/contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
+      <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+    </div>
+  </nav>
+
+  <div class="bg-gradient-to-b from-orange-50 to-white min-h-screen font-sans mt-12">
+    <div class="container mx-auto px-4 py-8">
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-red-900">Gallery</h1>
+            <p class="mt-2 text-gray-700">Experience our journey through training sessions, competitions, and community events that showcase the spirit of Binirayan Arnis Team.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="flex justify-center mt-6 space-x-4">
+            <button class="px-4 py-2 bg-red-500 text-white rounded-md">All</button>
+            <button class="px-4 py-2 bg-white border border-red-500 text-red-500 rounded-md">Training</button>
+            <button class="px-4 py-2 bg-white border border-red-500 text-red-500 rounded-md">Competition</button>
+            <button class="px-4 py-2 bg-white border border-red-500 text-red-500 rounded-md">Events</button>
+            <button class="px-4 py-2 bg-white border border-red-500 text-red-500 rounded-md">Community</button>
+            <button class="px-4 py-2 bg-white border border-red-500 text-red-500 rounded-md">Video</button>
+        </div>
+
+        <!-- Gallery Images -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <div class="relative group">
+                <img src="https://via.placeholder.com/300" alt="Competition" class="w-full h-48 object-cover rounded-lg">
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Competition</span>
+            </div>
+            <div class="relative group">
+                <img src="https://via.placeholder.com/300" alt="Training" class="w-full h-48 object-cover rounded-lg">
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Training</span>
+            </div>
+            <div class="relative group">
+                <img src="https://via.placeholder.com/300" alt="Video" class="w-full h-48 object-cover rounded-lg">
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Video</span>
+            </div>
+            <div class="relative group">
+                <img src="https://via.placeholder.com/300" alt="Community" class="w-full h-48 object-cover rounded-lg">
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Community</span>
+            </div>
+            <div class="relative group">
+                <img src="https://via.placeholder.com/300" alt="Events" class="w-full h-48 object-cover rounded-lg">
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Events</span>
+            </div>
+            <div class="relative group">
+                <img src="https://via.placeholder.com/300" alt="Training" class="w-full h-48 object-cover rounded-lg">
+                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">Training</span>
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="text-center mt-12">
+            <h2 class="text-2xl font-bold text-red-900">Want to Be Part of Our Story?</h2>
+            <p class="mt-2 text-gray-700">Join our team and create memories that will last a lifetime while mastering the art of Arnis.</p>
+            <button onclick="showSweetAlert()" class="mt-4 px-6 py-3 bg-red-500 text-white font-bold rounded-lg shadow-lg hover:bg-red-600">
+                Start Your Journey
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-red-900 text-white mt-16 py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold text-lg">BAT</h3>
+                <p class="mt-2 text-sm">Binirayan Arnis Team<br>Preserving Filipino heritage through martial arts excellence. Building discipline, character, and community in Antique since 2014.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="hover:text-gray-300">Facebook</a>
+                    <a href="#" class="hover:text-gray-300">Instagram</a>
+                    <a href="#" class="hover:text-gray-300">YouTube</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Training Programs</a></li>
+                    <li><a href="#" class="hover:text-gray-300">News & Events</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Our Programs</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">Beginner Fundamentals</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Intermediate Training</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Competition Team</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Youth Program</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Cultural Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Info</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li>123 Heritage Street<br>San Jose de Buenavista<br>Antique, Philippines 5700</li>
+                    <li>+63 123 456 7890</li>
+                    <li>info@binirayarnis.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-sm">Stay Updated</p>
+            <div class="mt-2 flex justify-center">
+                <input type="email" placeholder="Enter your email" class="w-64 px-4 py-2 text-gray-700 rounded-l-lg border border-gray-300 focus:ring-red-500 focus:border-red-500">
+                <button class="px-4 py-2 bg-red-500 text-white font-bold rounded-r-lg hover:bg-red-600">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showSweetAlert() {
+            Swal.fire({
+                title: 'Join Our Team!',
+                text: 'Are you ready to start your journey?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Yes, I\'m in!',
+                cancelButtonText: 'Not yet',
+                customClass: {
+                    confirmButton: 'bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded',
+                    cancelButton: 'bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded'
+                }
+            });
+        }
+
+        function joinTeam() {
+      Swal.fire({
+        title: 'Join the Team!',
+        text: 'Fill out the registration form at our contact page.',
+        icon: 'info',
+        confirmButtonColor: '#facc15'
+      });
+    }
+    </script>
+  </div>
+
+</body>
+</html>

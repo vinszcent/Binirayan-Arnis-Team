@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binirayan Arnis Team</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body  class="bg-gradient-to-br from-red-800 to-red-600 text-white font-sans">
+
+    <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-red-900 shadow">
+    <div class="flex items-center space-x-2">
+      <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
+      <div class="text-sm">Binirayan Arnis Team</div>
+    </div>
+    <div class="space-x-6 font-semibold">
+      <a href="../Html/index.html" class="hover:text-yellow-300 nav-link">Home</a>
+      <a href="../Html/about.html" class="hover:text-yellow-300 nav-link active">About</a>
+      <a href="../Html/training.html" class="hover:text-yellow-300 nav-link">Training</a>
+      <a href="../Html/news.html" class="hover:text-yellow-300 nav-link">News</a>
+      <a href="../Html/gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
+      <a href="../Html/contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
+      <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+    </div>
+  </nav>
+  
+  <div class="bg-white text-gray-700 font-sans mt-12">
+    <!-- About Section -->
+    <section class="container mx-auto px-6 py-12">
+        <!-- Title and Description -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-red-800">About Binirayan Arnis Team</h1>
+            <p class="mt-4 text-lg">
+                Founded in Antique, we are more than a martial arts team—we are guardians of Filipino heritage,
+                dedicated to teaching the ancient art of Arnis while building strong, disciplined individuals.
+            </p>
+        </div>
+
+        <!-- Our Legacy Section -->
+        <div class="flex flex-col lg:flex-row items-center lg:items-start mb-12">
+            <!-- Legacy Text -->
+            <div class="lg:w-1/2">
+                <h2 class="text-2xl font-bold text-red-800 mb-4">Our Legacy</h2>
+                <p class="mb-4">
+                    The Binirayan Arnis Team has been a cornerstone of martial arts education in Antique, representing
+                    our province with pride in regional competitions like WVRAA. Our commitment goes beyond winning—we
+                    aim to develop well-rounded individuals who carry the values of Arnis into their daily lives.
+                </p>
+                <p>
+                    Through traditional stick fighting, empty-hand techniques, and blade work, we teach not just combat
+                    skills but life lessons: respect, perseverance, and the importance of protecting what matters most.
+                </p>
+            </div>
+
+            <!-- Image -->
+            <div class="lg:w-1/2 mt-6 lg:mt-0 lg:ml-6">
+                <img src="https://via.placeholder.com/600" alt="Legacy Image"
+                    class="rounded-lg shadow-lg border border-gray-300">
+            </div>
+        </div>
+
+        <!-- Values Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Tradition -->
+            <div
+                class="bg-red-50 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="text-red-800 text-4xl mb-4">❤️</div>
+                <h3 class="text-xl font-bold text-red-800 mb-2">Tradition</h3>
+                <p class="text-sm">
+                    Preserving the rich heritage of Filipino martial arts through authentic Arnis techniques and
+                    cultural values.
+                </p>
+            </div>
+
+            <!-- Discipline -->
+            <div
+                class="bg-red-50 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="text-red-800 text-4xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold text-red-800 mb-2">Discipline</h3>
+                <p class="text-sm">
+                    Building character and focus through rigorous training, mental fortitude, and respect for the art.
+                </p>
+            </div>
+
+            <!-- Community -->
+            <div
+                class="bg-red-50 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="text-red-800 text-4xl mb-4">👥</div>
+                <h3 class="text-xl font-bold text-red-800 mb-2">Community</h3>
+                <p class="text-sm">
+                    Creating bonds that extend beyond training, fostering lifelong friendships and mutual support.
+                </p>
+            </div>
+
+            <!-- Excellence -->
+            <div
+                class="bg-red-50 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div class="text-red-800 text-4xl mb-4">🛡️</div>
+                <h3 class="text-xl font-bold text-red-800 mb-2">Excellence</h3>
+                <p class="text-sm">
+                    Striving for mastery in every aspect, from basic techniques to competitive performance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-red-900 text-white mt-16 py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold text-lg">BAT</h3>
+                <p class="mt-2 text-sm">Binirayan Arnis Team<br>Preserving Filipino heritage through martial arts excellence. Building discipline, character, and community in Antique since 2014.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="hover:text-gray-300">Facebook</a>
+                    <a href="#" class="hover:text-gray-300">Instagram</a>
+                    <a href="#" class="hover:text-gray-300">YouTube</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Training Programs</a></li>
+                    <li><a href="#" class="hover:text-gray-300">News & Events</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Our Programs</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">Beginner Fundamentals</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Intermediate Training</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Competition Team</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Youth Program</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Cultural Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Info</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li>123 Heritage Street<br>San Jose de Buenavista<br>Antique, Philippines 5700</li>
+                    <li>+63 123 456 7890</li>
+                    <li>info@binirayarnis.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-sm">Stay Updated</p>
+            <div class="mt-2 flex justify-center">
+                <input type="email" placeholder="Enter your email" class="w-64 px-4 py-2 text-gray-700 rounded-l-lg border border-gray-300 focus:ring-red-500 focus:border-red-500">
+                <button class="px-4 py-2 bg-red-500 text-white font-bold rounded-r-lg hover:bg-red-600">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SweetAlert2 Script -->
+    <script>
+        function showAlert(title, text, icon) {
+            Swal.fire({
+                title: title,
+                text: text,
+                icon: icon,
+                confirmButtonText: 'Close'
+            });
+        }
+
+        function joinTeam() {
+      Swal.fire({
+        title: 'Join the Team!',
+        text: 'Fill out the registration form at our contact page.',
+        icon: 'info',
+        confirmButtonColor: '#facc15'
+      });
+    }
+    </script>
+
+  </div>
+</body>
+</html>

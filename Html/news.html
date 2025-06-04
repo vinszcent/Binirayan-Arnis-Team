@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binirayan Arnis Team</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-gradient-to-br from-red-800 to-red-600 text-white font-sans">
+
+ <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-red-900 shadow">
+    <div class="flex items-center space-x-2">
+      <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
+      <div class="text-sm">Binirayan Arnis Team</div>
+    </div>
+    <div class="space-x-6 font-semibold">
+      <a href="../Html/index.html" class="hover:text-yellow-300 nav-link">Home</a>
+      <a href="../Html/about.html" class="hover:text-yellow-300 nav-link">About</a>
+      <a href="../Html/training.html" class="hover:text-yellow-300 nav-link active">Training</a>
+      <a href="../Html/news.html" class="hover:text-yellow-300 nav-link">News</a>
+      <a href="../Html/gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
+      <a href="../Html/contact.html" class="hover:text-yellow-300 nav-link">Contact</a>
+      <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+    </div>
+  </nav>
+
+  <div class="bg-yellow-50 font-sans mt-12 ">
+
+  <section class="container mx-auto px-6 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-red-800">News & Events</h1>
+      <p class="mt-4 text-gray-700">Stay updated with our latest achievements, upcoming events, and community activities.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Latest News -->
+      <div class="md:col-span-2 space-y-6">
+        <h2 class="text-2xl font-bold text-red-800 mb-4">Latest News</h2>
+
+        <!-- News Card 1 -->
+        <div class="bg-red-50 border border-red-200 rounded-lg overflow-hidden flex flex-col md:flex-row">
+          <img src="https://via.placeholder.com/250x180" alt="News Image" class="w-full md:w-64 object-cover">
+          <div class="p-4 flex flex-col justify-between">
+            <div>
+              <div class="flex space-x-2 mb-2">
+                <span class="text-xs bg-red-300 text-red-800 px-2 py-1 rounded-full">Competition</span>
+                <span class="text-xs bg-yellow-300 text-yellow-800 px-2 py-1 rounded-full">Featured</span>
+              </div>
+              <h3 class="text-lg font-bold text-red-800">WVRAA 2024 Competition Results</h3>
+              <p class="text-sm text-gray-600 my-2">📅 March 15, 2024</p>
+              <p class="text-sm text-gray-700 mb-4">Our team proudly represented Antique at the Western Visayas Regional Athletic Association...</p>
+            </div>
+            <a href="#" class="text-red-800 text-sm font-semibold hover:underline">Read More →</a>
+          </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="bg-white border rounded-lg overflow-hidden flex flex-col md:flex-row">
+          <img src="https://via.placeholder.com/250x180" alt="News Image" class="w-full md:w-64 object-cover">
+          <div class="p-4 flex flex-col justify-between">
+            <div>
+              <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">Facility</span>
+              <h3 class="text-lg font-bold text-red-800 mt-2">New Training Facility Opening</h3>
+              <p class="text-sm text-gray-600 my-2">📅 February 28, 2024</p>
+              <p class="text-sm text-gray-700 mb-4">We’re excited to announce the opening of our expanded training facility with traditional equipment...</p>
+            </div>
+            <a href="#" class="text-red-800 text-sm font-semibold hover:underline">Read More →</a>
+          </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="bg-white border rounded-lg overflow-hidden flex flex-col md:flex-row">
+          <img src="https://via.placeholder.com/250x180" alt="News Image" class="w-full md:w-64 object-cover">
+          <div class="p-4 flex flex-col justify-between">
+            <div>
+              <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded-full">Program</span>
+              <h3 class="text-lg font-bold text-red-800 mt-2">Youth Arnis Program Launch</h3>
+              <p class="text-sm text-gray-600 my-2">📅 February 10, 2024</p>
+              <p class="text-sm text-gray-700 mb-4">Introducing our new youth program designed for students aged 8-16 to learn Arnis fundamentals...</p>
+            </div>
+            <a href="#" class="text-red-800 text-sm font-semibold hover:underline">Read More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="space-y-8">
+        <!-- Upcoming Events -->
+        <div>
+          <h2 class="text-2xl font-bold text-red-800 mb-4">Upcoming Events</h2>
+
+          <div class="space-y-4">
+            <div class="border p-4 rounded-lg bg-white">
+              <span class="text-xs bg-red-200 text-red-800 px-2 py-1 rounded-full">Internal Competition</span>
+              <h3 class="font-bold mt-2">Monthly Tournament</h3>
+              <p class="text-sm text-gray-600">📅 April 20, 2024</p>
+              <p class="text-sm text-gray-600">🕑 2:00 PM - 6:00 PM</p>
+              <p class="text-sm text-gray-600">📍 BAT Training Center</p>
+            </div>
+
+            <div class="border p-4 rounded-lg bg-white">
+              <span class="text-xs bg-yellow-200 text-yellow-800 px-2 py-1 rounded-full">Educational</span>
+              <h3 class="font-bold mt-2">Cultural Heritage Workshop</h3>
+              <p class="text-sm text-gray-600">📅 May 5, 2024</p>
+              <p class="text-sm text-gray-600">🕑 10:00 AM - 4:00 PM</p>
+              <p class="text-sm text-gray-600">📍 Antique Cultural Center</p>
+            </div>
+
+            <div class="border p-4 rounded-lg bg-white">
+              <span class="text-xs bg-pink-200 text-pink-800 px-2 py-1 rounded-full">Open House</span>
+              <h3 class="font-bold mt-2">Beginner's Open House</h3>
+              <p class="text-sm text-gray-600">📅 May 15, 2024</p>
+              <p class="text-sm text-gray-600">🕑 6:00 PM - 8:00 PM</p>
+              <p class="text-sm text-gray-600">📍 BAT Training Center</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stay Connected -->
+        <div class="bg-gradient-to-br from-red-900 to-red-700 p-6 rounded-lg text-white">
+          <h3 class="text-lg font-bold mb-2">Stay Connected</h3>
+          <p class="text-sm mb-4">Get the latest news and updates directly to your inbox.</p>
+          <input type="email" id="emailInput" placeholder="Your email address" class="w-full p-2 rounded mb-3 text-red-800">
+          <button onclick="subscribe()" class="bg-yellow-400 text-red-900 font-bold w-full p-2 rounded hover:bg-yellow-500">Subscribe</button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer class="bg-red-900 text-white mt-16 py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold text-lg">BAT</h3>
+                <p class="mt-2 text-sm">Binirayan Arnis Team<br>Preserving Filipino heritage through martial arts excellence. Building discipline, character, and community in Antique since 2014.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="hover:text-gray-300">Facebook</a>
+                    <a href="#" class="hover:text-gray-300">Instagram</a>
+                    <a href="#" class="hover:text-gray-300">YouTube</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Training Programs</a></li>
+                    <li><a href="#" class="hover:text-gray-300">News & Events</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Our Programs</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">Beginner Fundamentals</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Intermediate Training</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Competition Team</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Youth Program</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Cultural Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Info</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li>123 Heritage Street<br>San Jose de Buenavista<br>Antique, Philippines 5700</li>
+                    <li>+63 123 456 7890</li>
+                    <li>info@binirayarnis.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-sm">Stay Updated</p>
+            <div class="mt-2 flex justify-center">
+                <input type="email" placeholder="Enter your email" class="w-64 px-4 py-2 text-gray-700 rounded-l-lg border border-gray-300 focus:ring-red-500 focus:border-red-500">
+                <button class="px-4 py-2 bg-red-500 text-white font-bold rounded-r-lg hover:bg-red-600">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+  <script>
+    function subscribe() {
+      const email = document.getElementById('emailInput').value;
+      if (email) {
+        Swal.fire({
+          title: 'Subscribed!',
+          text: `Thank you for subscribing, ${email}!`,
+          icon: 'success',
+          confirmButtonText: 'Close'
+        });
+      } else {
+        Swal.fire({
+          title: 'Oops!',
+          text: 'Please enter a valid email address.',
+          icon: 'error',
+          confirmButtonText: 'Try Again'
+        });
+      }
+    }
+
+    function joinTeam() {
+      Swal.fire({
+        title: 'Join the Team!',
+        text: 'Fill out the registration form at our contact page.',
+        icon: 'info',
+        confirmButtonColor: '#facc15'
+      });
+    }
+  </script>
+
+</body>
+</html>

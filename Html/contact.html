@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Binirayan Arnis Team</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body class="bg-gradient-to-br from-red-800 to-red-600 text-white font-sans">
+
+ <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center p-4 bg-red-900 shadow">
+    <div class="flex items-center space-x-2">
+      <div class="text-yellow-400 text-2xl font-bold">🛡️ BAT</div>
+      <div class="text-sm">Binirayan Arnis Team</div>
+    </div>
+    <div class="space-x-6 font-semibold">
+      <a href="../Html/index.html" class="hover:text-yellow-300 nav-link">Home</a>
+      <a href="../Html/about.html" class="hover:text-yellow-300 nav-link">About</a>
+      <a href="../Html/training.html" class="hover:text-yellow-300 nav-link">Training</a>
+      <a href="../Html/news.html" class="hover:text-yellow-300 nav-link">News</a>
+      <a href="../Html/gallery.html" class="hover:text-yellow-300 nav-link">Gallery</a>
+      <a href="../Html/contact.html" class="hover:text-yellow-300 nav-link active">Contact</a>
+      <button onclick="joinTeam()" class="bg-yellow-400 text-red-900 px-3 py-1 rounded font-bold hover:bg-yellow-500">Join the Team</button>
+    </div>
+  </nav>
+
+  <div class="bg-gradient-to-b from-orange-50 to-white min-h-screen font-sans mt-12">
+     <div class="container mx-auto px-4 py-8">
+        <div class="text-center">
+            <h1 class="text-3xl font-bold text-red-900">Get In Touch</h1>
+            <p class="mt-2 text-gray-700">Ready to begin your Arnis journey? Have questions about our programs? We’d love to hear from you and help you take the first step.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+            <!-- Contact Information -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800">Contact Information</h2>
+                <div class="mt-4 text-gray-700">
+                    <p><strong class="text-red-900">Training Center</strong><br>123 Heritage Street, San Jose de Buenavista<br>Antique, Philippines 5700</p>
+                    <p class="mt-4"><strong class="text-red-900">Phone</strong><br>+63 123 456 7890<br>+63 987 654 3210</p>
+                    <p class="mt-4"><strong class="text-red-900">Email</strong><br>info@binirayarnis.com<br>training@binirayarnis.com</p>
+                    <p class="mt-4"><strong class="text-red-900">Training Hours</strong><br>Monday - Friday: 6:00 PM - 9:00 PM<br>Saturday: 2:00 PM - 6:00 PM<br>Sunday: 9:00 AM - 12:00 PM</p>
+                </div>
+                <div class="flex space-x-4 mt-6">
+                    <div class="bg-red-100 border-l-4 border-red-500 p-4 rounded-md">
+                        <p class="text-sm text-red-800 font-bold">Free Trial</p>
+                        <p class="text-sm text-gray-700">First session is always free for new members</p>
+                    </div>
+                    <div class="bg-red-100 border-l-4 border-red-500 p-4 rounded-md">
+                        <p class="text-sm text-red-800 font-bold">All Ages</p>
+                        <p class="text-sm text-gray-700">Programs available for ages 8 and up</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <h2 class="text-xl font-bold text-gray-800">Send us a Message</h2>
+                <p class="mt-2 text-gray-700">Fill out the form below and we’ll get back to you within 24 hours.</p>
+                <form class="mt-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium text-gray-700">First Name *</label>
+                            <input type="text" id="first-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="Juan" required>
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name *</label>
+                            <input type="text" id="last-name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="Dela Cruz" required>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+                        <input type="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="juan@example.com" required>
+                    </div>
+                    <div class="mt-4">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                        <input type="tel" id="phone" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="+63 123 456 7890">
+                    </div>
+                    <div class="mt-4">
+                        <label for="interest-level" class="block text-sm font-medium text-gray-700">Interest Level</label>
+                        <select id="interest-level" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500">
+                            <option>Select your level</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+                    </div>
+                    <div class="mt-4">
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message *</label>
+                        <textarea id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="Tell us about your interest in Arnis, your goals, or any questions you have..." required></textarea>
+                    </div>
+                    <div class="mt-6">
+                        <button type="button" onclick="submitForm()" class="w-full px-4 py-2 bg-red-500 text-white font-bold rounded-lg shadow-lg hover:bg-red-600">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="mt-12 text-center">
+            <h2 class="text-xl font-bold text-gray-800">Find Our Training Center</h2>
+            <p class="mt-2 text-gray-700">Located in the heart of San Jose de Buenavista, our facility is easily accessible by public transportation.</p>
+            <div class="mt-6 bg-gray-200 border border-gray-300 rounded-lg p-12 text-gray-700">
+                <p><strong>Interactive Map</strong></p>
+                <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1959.9220443133308!2d121.93908841670552!3d10.746496930358761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ae39e7fb9b4593%3A0xe9a2efffb8b79dec!2sSan%20Jose%20de%20Buenavista%20Business%20Park!5e0!3m2!1sen!2sph!4v1748960327809!5m2!1sen!2sph" 
+            width="1160" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-red-900 text-white mt-16 py-8">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="font-bold text-lg">BAT</h3>
+                <p class="mt-2 text-sm">Binirayan Arnis Team<br>Preserving Filipino heritage through martial arts excellence. Building discipline, character, and community in Antique since 2014.</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="hover:text-gray-300">Facebook</a>
+                    <a href="#" class="hover:text-gray-300">Instagram</a>
+                    <a href="#" class="hover:text-gray-300">YouTube</a>
+                </div>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Quick Links</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">About Us</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Training Programs</a></li>
+                    <li><a href="#" class="hover:text-gray-300">News & Events</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Gallery</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Our Programs</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-gray-300">Beginner Fundamentals</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Intermediate Training</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Competition Team</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Youth Program</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Cultural Workshops</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="font-bold text-lg">Contact Info</h3>
+                <ul class="mt-2 space-y-2 text-sm">
+                    <li>123 Heritage Street<br>San Jose de Buenavista<br>Antique, Philippines 5700</li>
+                    <li>+63 123 456 7890</li>
+                    <li>info@binirayarnis.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center mt-8">
+            <p class="text-sm">Stay Updated</p>
+            <div class="mt-2 flex justify-center">
+                <input type="email" placeholder="Enter your email" class="w-64 px-4 py-2 text-gray-700 rounded-l-lg border border-gray-300 focus:ring-red-500 focus:border-red-500">
+                <button class="px-4 py-2 bg-red-500 text-white font-bold rounded-r-lg hover:bg-red-600">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function submitForm() {
+            Swal.fire({
+                title: 'Message Sent!',
+                text: 'Thank you for reaching out. We will get back to you within 24 hours.',
+                icon: 'success',
+                confirmButtonText: 'Close',
+                customClass: {
+                    confirmButton: 'bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded'
+                }
+            });
+        }
+
+        function joinTeam() {
+      Swal.fire({
+        title: 'Join the Team!',
+        text: 'Fill out the registration form at our contact page.',
+        icon: 'info',
+        confirmButtonColor: '#facc15'
+      });
+    }
+    </script>
+  </div>
+
+</body>
+</html>
